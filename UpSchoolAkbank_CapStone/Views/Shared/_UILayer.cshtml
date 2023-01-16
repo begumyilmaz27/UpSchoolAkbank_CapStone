@@ -1,0 +1,114 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Saç Aksesuarları</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free Website Template" name="keywords">
+    <meta content="Free Website Template" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS Libraries -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="~/barber-shop-template/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="~/barber-shop-template/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="~/barber-shop-template/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="~/barber-shop-template/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Top Bar Start -->
+    @await Html.PartialAsync("~/Views/LayoutPartial/_LayoutTopBar.cshtml")
+    <!-- Top Bar End -->
+
+    <!-- Nav Bar Start -->
+    @await Html.PartialAsync("~/Views/LayoutPartial/_LayoutNavbar.cshtml")
+    <!-- Nav Bar End -->
+
+    <!-- Hero Start -->
+    @await Html.PartialAsync("~/Views/LayoutPartial/_LayoutHero.cshtml")
+    <!-- Hero End -->
+
+    <!-- Video Modal Start-->
+    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <!-- 16:9 aspect ratio -->
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="" id="video" allowscriptaccess="always" allow="autoplay"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Video Modal End -->
+    
+    <!-- About Start -->
+    @await Html.PartialAsync("~/Views/LayoutPartial/_LayoutAbout.cshtml")
+    <!-- About End -->
+
+    <!-- Our Product Start -->
+    @await Html.PartialAsync("~/Views/LayoutPartial/_LayoutProduct.cshtml")
+    <!-- Our Product End -->
+
+    <!-- Pricing Start -->
+    @await Html.PartialAsync("~/Views/LayoutPartial/_LayoutPrice.cshtml")
+    <!-- Pricing End -->
+
+    <!-- Testimonial Start -->
+    @await Html.PartialAsync("~/Views/LayoutPartial/_LayoutTestimonial.cshtml")
+    <!-- Testimonial End -->
+
+    <!-- Team Start -->
+    @await Html.PartialAsync("~/Views/LayoutPartial/_LayoutTeamMember.cshtml")
+    <!-- Team End -->
+
+    <!-- Contact Start -->
+    @await Html.PartialAsync("~/Views/LayoutPartial/_LayoutContact.cshtml")
+    <!-- Contact End -->
+
+    <!-- Blog Start -->
+@*Blog partial View'ını eklemedim*@
+    <!-- Blog End -->
+
+    <!-- Footer Start -->
+    @await Html.PartialAsync("~/Views/LayoutPartial/_LayoutFooter.cshtml")
+    <!-- Footer End -->
+
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="~/barber-shop-template/lib/easing/easing.min.js"></script>
+    <script src="~/barber-shop-template/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="~/barber-shop-template/lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="~/barber-shop-template/lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="~/barber-shop-template/mail/jqBootstrapValidation.min.js"></script>
+    <script src="~/barber-shop-template/mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="~/barber-shop-template/js/main.js"></script>
+</body>
+</html>
+
+@RenderBody();

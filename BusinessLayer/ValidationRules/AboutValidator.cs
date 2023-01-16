@@ -13,7 +13,11 @@ namespace BusinessLayer.ValidationRules
     {
         public AboutValidator()
         {
-            RuleFor(x => x.WebSites).NotEmpty();
+            RuleFor(x => x.WebSites).NotEmpty().WithMessage("WebSite kısmını boş geçmeyiniz.");
+            RuleFor(x => x.AboutDescription).NotEmpty().WithMessage("Açıklama kısmını boş geçmeyiniz.");
+            RuleFor(x => x.AboutDescription2).NotEmpty().WithMessage("Açıklama kısmını boş geçmeyiniz.");
+            RuleFor(x => x.AboutTitle2).NotEmpty().WithMessage("Açıklama kısmını boş geçmeyiniz.");
+
         }
     }
 }
