@@ -1,0 +1,61 @@
+﻿@using EntityLayer.Concrete
+@model List<Contact>
+
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div>                           
+                        @foreach (var item in Model)
+                        {
+                            <div class="footer-contact">
+                                <h2>
+                                    If You Want To Contact Us
+                                </h2>
+                                <p><i class="fa fa-map-marker-alt"></i>item.MapLocation</p>                            
+
+                                <p><i class="fa fa-phone-alt"></i>@item.ContactPhone</p>
+                                <p><i class="fa fa-envelope"></i>@item.ContactMail</p>                                
+                                <div class="footer-social">
+                                    <a href=""><i class="fab fa-twitter"></i></a>
+                                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a href=""><i class="fab fa-youtube"></i></a>
+                                    <a href=""><i class="fab fa-instagram"></i></a>
+                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                                <br>
+                                <p>
+                                &copy; @DateTime.Now.Year Bivalvia. Tüm hakları saklıdır.Design by Begüm<a href="https://w3layouts.com/" target="_blank"></a>
+                                </p>                                
+                            </div>
+                        }
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="footer-link">
+                            <h2>KURUMSAL</h2>
+                            <ul>
+                                <li><a href="/Default/Index/">Ana Sayfa</a></li>
+                                <li><a href="">Bize Ulaşın</a></li>
+                                <li><a href="about.html">Hakkımızda</a></li>
+                            </ul>                       
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="footer-newsletter">
+                    <h2>Newsletter</h2>
+                    <p>If you want to be informed about our new products and campaigns, you can add your e-mail address to our newsletter.</p>
+                    <div class="form">
+                        <input class="form-control" placeholder="Email goes here">
+                        <button class="btn">Submit</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

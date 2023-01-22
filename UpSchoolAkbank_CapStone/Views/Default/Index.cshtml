@@ -4,5 +4,13 @@
     Layout = "~/Views/Shared/_UILayer.cshtml";
 }
 
-<h1>Index</h1>
+@await Component.InvokeAsync("_LayoutHeroPartial")
+@await Component.InvokeAsync("_NavbarPartial")
+@await Component.InvokeAsync("_AboutPartial")
+@await Component.InvokeAsync("_CategoryPartial")
+@await Component.InvokeAsync("_ProductPartial")
+@await Component.InvokeAsync("_TestimonialPartial")
+@await Component.InvokeAsync("_ContactPartial")
+
+
 

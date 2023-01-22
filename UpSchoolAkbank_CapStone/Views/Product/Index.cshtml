@@ -1,0 +1,170 @@
+﻿@model List<Product>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_UILayer.cshtml";
+}
+
+
+<html lang="en">
+         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+        <!-- CSS Libraries -->
+<link href="~/barber-shop-template/https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+<link href="~/barber-shop-template/https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+<link href="~/barber-shop-template/lib/animate/animate.min.css" rel="stylesheet">
+<link href="~/barber-shop-template/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+<link href="~/barber-shop-template/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+<link href="~/barber-shop-template/css/style.css" rel="stylesheet">
+<body>
+    
+    <!-- Nav Bar Start -->
+    <div class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container-fluid">
+            <a href="index.html" class="navbar-brand">Bivalvia <span>Accessories</span></a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav ml-auto">
+                    <a href="/Default/Index/" class="nav-item nav-link active">Home</a>
+                    <a href="about.html" class="nav-item nav-link">Handicrafts</a>
+                    <a href="service.html" class="nav-item nav-link">Accessories</a>
+                    <a href="/Product/Index/" class="nav-item nav-link">Products</a>
+                    <div class="nav-item dropdown">
+                        <a href="about.html" class="nav-link dropdown-toggle" data-toggle="dropdown">About</a>
+                        <div class="dropdown-menu">
+                            <a href="team.html" class="dropdown-item">Who We Are</a>
+                            <a href="single.html" class="dropdown-item">Basında</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Nav Bar End -->
+    <!-- Page Header Start -->
+    <div class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Price</h2>
+                </div>
+                <div class="col-12">
+                    <a href="">Home</a>
+                    <a href="">Price</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page Header End -->
+    <!-- Pricing Start -->
+    
+        <div class="container">
+            <div class="section-header text-center">                
+                <h1>We Provide Best Price in the City</h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-5 col-md-3 col-sm-3">
+                    @*col lg-4 md-3 sm-3*@
+                    @foreach (var item in Model)
+                    {
+                        <div class="price-item">
+                            <div class="price-img">
+                                <img src="@item.Image" style="width:100%;" alt="Image">
+                            </div>
+                            <div class="price-text">
+                                <h2>@item.ProductName</h2>
+                                <p>@item.Description</p>
+                                <h3>@item.Price</h3>
+                            </div>
+
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    
+    <!-- Pricing End -->
+    <!-- Footer Start -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="footer-contact">
+                                <h2>Salon Address</h2>
+                                <p><i class="fa fa-map-marker-alt"></i>123 Street, New York, USA</p>
+                                <p><i class="fa fa-phone-alt"></i>+012 345 67890</p>
+                                <p><i class="fa fa-envelope"></i>info@example.com</p>
+                                <div class="footer-social">
+                                    <a href=""><i class="fab fa-twitter"></i></a>
+                                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a href=""><i class="fab fa-youtube"></i></a>
+                                    <a href=""><i class="fab fa-instagram"></i></a>
+                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="footer-link">
+                                <h2>Quick Links</h2>
+                                <a href="">Terms of use</a>
+                                <a href="">Privacy policy</a>
+                                <a href="">Cookies</a>
+                                <a href="">Help</a>
+                                <a href="">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="footer-newsletter">
+                        <h2>Newsletter</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet elit. Quisque eu lectus a leo dictum nec non quam. Tortor eu placerat rhoncus, lorem quam iaculis felis, sed lacus neque id eros.
+                        </p>
+                        <div class="form">
+                            <input class="form-control" placeholder="Email goes here">
+                            <button class="btn">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container copyright">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; <a href="#">Your Site Name</a>, All Right Reserved.</p>
+                </div>
+                <div class="col-md-6">
+                    <p>Designed By <a href="https://htmlcodex.com">HTML Codex</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer End -->
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="~/barber-shop-template/lib/easing/easing.min.js"></script>
+    <script src="~/barber-shop-template/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="~/barber-shop-template/lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="~/barber-shop-template/lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="~/barber-shop-template/mail/jqBootstrapValidation.min.js"></script>
+    <script src="~/barber-shop-template/mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="~/barber-shop-template/js/main.js"></script>
+</body>
+</html>
+
+
+
+

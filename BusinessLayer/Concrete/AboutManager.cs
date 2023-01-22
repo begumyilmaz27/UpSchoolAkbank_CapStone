@@ -22,7 +22,7 @@ namespace BusinessLayer.Concrete
         {
             _aboutDal.Delete(t);    
         }
-        //Void türünde olmadığı için başına RETURN eklememiz gerekiyor. 
+        
         public About TGetByID(int id)
         {
             return _aboutDal.GetByID(id);

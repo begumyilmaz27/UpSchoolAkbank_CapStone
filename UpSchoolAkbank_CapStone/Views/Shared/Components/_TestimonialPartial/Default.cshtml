@@ -1,0 +1,29 @@
+﻿@using EntityLayer.Concrete
+@model List<Testimonial>
+
+<div class="testimonial">
+    <div class="container">
+        <div class="owl-carousel testimonials-carousel">
+            @foreach (var item in Model)
+            {
+                <div class="testimonial-item">
+                    <img src="~/barber-shop-template/img/testimonial-1.jpg" alt="Image">
+                    <p>
+                        @item.Comment
+                    </p>
+                    <h2>@item.Customer</h2>
+                    @*<h3>Profession</h3>*@
+                </div>
+                <div class="testimonial-item">
+                    <img src="~/barber-shop-template/img/testimonial-2.jpg" alt="Image">
+                    <p>
+                        htnjty
+                    </p>
+                    <h2>Client Name</h2>
+                    <h3>Profession</h3>
+                </div>
+            }
+
+        </div>
+    </div>
+</div>

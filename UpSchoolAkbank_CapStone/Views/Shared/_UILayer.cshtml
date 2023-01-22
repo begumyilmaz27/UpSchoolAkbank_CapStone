@@ -1,4 +1,4 @@
-﻿
+﻿ 
 @{
     Layout = null;
 }
@@ -25,6 +25,8 @@
     <link href="~/barber-shop-template/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="~/barber-shop-template/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
+
+
     <!-- Template Stylesheet -->
     <link href="~/barber-shop-template/css/style.css" rel="stylesheet">
 </head>
@@ -35,11 +37,11 @@
     <!-- Top Bar End -->
 
     <!-- Nav Bar Start -->
-    @await Html.PartialAsync("~/Views/LayoutPartial/_LayoutNavbar.cshtml")
+@*    Navbar örneği olarak yaptım burayı*@
     <!-- Nav Bar End -->
 
     <!-- Hero Start -->
-    @await Html.PartialAsync("~/Views/LayoutPartial/_LayoutHero.cshtml")
+@*    @await Html.PartialAsync("~/Views/LayoutPartial/_LayoutHero.cshtml")*@
     <!-- Hero End -->
 
     <!-- Video Modal Start-->
@@ -61,38 +63,42 @@
     <!-- Video Modal End -->
     
     <!-- About Start -->
-    @await Html.PartialAsync("~/Views/LayoutPartial/_LayoutAbout.cshtml")
+    @*@await Html.PartialAsync("~/Views/LayoutPartial/_LayoutAbout.cshtml")*@
     <!-- About End -->
 
-    <!-- Our Product Start -->
-    @await Html.PartialAsync("~/Views/LayoutPartial/_LayoutProduct.cshtml")
-    <!-- Our Product End -->
+    <!-- Our Category Start -->
+    @*    Category Partial örneği olarak yaptım burayı*@
+    <!-- Our Category End -->
 
-    <!-- Pricing Start -->
-    @await Html.PartialAsync("~/Views/LayoutPartial/_LayoutPrice.cshtml")
+    <!-- Pricing Start --> <!--Product olarak yaptım-->
+@*    @await Html.PartialAsync("~/Views/LayoutPartial/_LayoutPrice.cshtml")*@
     <!-- Pricing End -->
 
     <!-- Testimonial Start -->
-    @await Html.PartialAsync("~/Views/LayoutPartial/_LayoutTestimonial.cshtml")
+@*    @await Html.PartialAsync("~/Views/LayoutPartial/_LayoutTestimonial.cshtml")*@
     <!-- Testimonial End -->
 
-    <!-- Team Start -->
-    @await Html.PartialAsync("~/Views/LayoutPartial/_LayoutTeamMember.cshtml")
+    <!-- Team Start -->  <!--Kullanmak istemiyorum üyeler kısmını-->
+@*    @await Html.PartialAsync("~/Views/LayoutPartial/_LayoutTeamMember.cshtml")*@
     <!-- Team End -->
 
-    <!-- Contact Start -->
-    @await Html.PartialAsync("~/Views/LayoutPartial/_LayoutContact.cshtml")
-    <!-- Contact End -->
+    
 
     <!-- Blog Start -->
 @*Blog partial View'ını eklemedim*@
     <!-- Blog End -->
 
     <!-- Footer Start -->
-    @await Html.PartialAsync("~/Views/LayoutPartial/_LayoutFooter.cshtml")
+@*    @await Html.PartialAsync("~/Views/LayoutPartial/_LayoutFooter.cshtml")*@
     <!-- Footer End -->
 
+    <!-- Contact Start BUNU EKLEMEDİM SQL KISMINA --> 
+    @*@await Html.PartialAsync("~/Views/LayoutPartial/_LayoutContact.cshtml")*@
+    <!-- Contact End -->
+
     <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+    @RenderBody();
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -111,4 +117,3 @@
 </body>
 </html>
 
-@RenderBody();
