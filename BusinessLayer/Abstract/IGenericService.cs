@@ -11,7 +11,8 @@ namespace BusinessLayer.Abstract
         void TInsert(T t);
         void TDelete(T t);
         void TUpdate(T t);
-        List<T> TGetList();
-        T TGetByID(int id);
+        List<T> TGetList();        
+        /*List<T> TGetProductById(); *///Ürünlere yapılan yorumları Id'ye göre getirmek için yapılıyor. 
+
     }
 }

@@ -1,0 +1,67 @@
+﻿@model EntityLayer.Concrete.Product
+@{
+    ViewData["Title"] = "ProductDetails";
+    Layout = "~/Views/Shared/_UILayer.cshtml";
+}
+
+<!doctype html>
+<html lang="en">
+<body>
+    <!-- about breadcrumb -->
+    @await Component.InvokeAsync("_NavbarPartial")
+    <!-- //about breadcrumb -->
+
+    <!-- Page Header Start -->
+    <div class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Products</h2>
+                </div>
+                <div class="col-12">
+                    <a href="/Default/Index/">Home</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+    <section class="blog-post-main w3l-homeblock1">
+        <!--/blog-post-->
+        <div class="blog-content-inf pb-5">
+            <div class="container pb-lg-4">
+                <div class="single-post-content">
+                    <p class="alphabet mb-4">
+                        <span class="big-letter"></span>@*@Model.Details1*@
+                    </p>
+                    <blockquote class="blockquote my-5">
+                        <div class="icon-quote"><span class="fa fa-quote-left" aria-hidden="true"></span></div>
+                        Gezi Tur Seyahat Rotalar Dünya.
+                        <footer class="blockquote-footer mt-3">
+                            Smith lara
+                        </footer>
+                    </blockquote>
+                    <div class="sing-post-thumb mb-5 row pt-3">
+                        <div class="col-sm-6">
+                            <a href="#url"><img src="@Model.Image" style="width:400px;height:400px;" class="img-fluid radius-image" alt=""></a>
+                        </div>
+                    </div>
+                    <h3 class="blog-desc-big m-0 mb-lg-4 mb-3">Açıklama</h3>
+                    <p class="mb-4">
+                        @Model.Description
+                    </p>
+
+                    @await Component.InvokeAsync("_CommentListPartial", new { id = ViewBag.id })
+                    @Model.Comments
+
+                    @await Html.PartialAsync("~/Views/Comment/AddComment.cshtml")
+                    <br /><br />
+                </div>
+            </div>
+            <!--//blog-post--> 
+        </div>
+    </section>
+</body>
+</html>
+@await Component.InvokeAsync("_ContactPartial")
+

@@ -7,24 +7,24 @@
             <p>Our Best Pricing</p>
             <h2>We Provide Best Price in the City</h2>
         </div>
-            <div class="row">
-                <div class="col-lg-5 col-md-3 col-sm-3">
-                    @*col lg-4 md-3 sm-3*@
-                    @foreach (var item in Model)
-                    {
-                    <div class="price-item">                    
+        <div class="row">
+            <div class="col-lg-4 col-md-3 col-sm-3">
+                @*col lg-4 md-3 sm-3*@
+                @foreach (var item in Model)
+                {
+                    <div class="price-item">
                         <div class="price-img">
                             <img src="@item.Image" style="width:100%;" alt="Image">
-                        </div>     
+                        </div>
                         <div class="price-text">
                             <h2>@item.ProductName</h2>
                             <p>@item.Description</p>
                             <h3>@item.Price</h3>
                         </div>
-                    
                     </div>
-                    }
-                </div>    
+                }
             </div>
+        </div>
+        c
     </div>
 </div>

@@ -739,11 +739,11 @@ a:focus {
 
 .price .price-img {
     position: relative;
-    width: 100px;
+    width: 80px;
 }
 
 .price .price-img img {
-    width: 100%;
+    width: 80%;
 }
 
 .price .price-img::after {
