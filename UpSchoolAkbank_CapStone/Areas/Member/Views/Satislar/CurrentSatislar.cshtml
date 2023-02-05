@@ -1,0 +1,29 @@
+﻿@using EntityLayer.Concrete
+@model List<Satislar>
+
+
+@{
+    ViewData["Title"] = "CurrentSatislar";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+<h1>My Active Order</h1>
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Ürün</th>
+        <th>Satış Tarihi</th>
+        <th>Durum</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+            <tr>
+                <td>@item.SaleID</td>
+                <td>@item.Product</td>
+                <td>@item.PersonCount</td>
+                <td>@item.SalesDate</td>
+                <td>@item.Status</td>
+            </tr>
+    }
+</table>
+

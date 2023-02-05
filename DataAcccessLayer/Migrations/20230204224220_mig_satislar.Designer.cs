@@ -4,14 +4,16 @@ using DataAcccessLayer.Concrete;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DataAcccessLayer.Migrations
 {
     [DbContext(typeof(Context))]
-    partial class ContextModelSnapshot : ModelSnapshot
+    [Migration("20230204224220_mig_satislar")]
+    partial class mig_satislar
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -355,8 +357,8 @@ namespace DataAcccessLayer.Migrations
                     b.Property<string>("PersonCount")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("ProductID")
-                        .HasColumnType("int");
+                    b.Property<string>("Product")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SaleDescription")
                         .HasColumnType("nvarchar(max)");
@@ -370,8 +372,6 @@ namespace DataAcccessLayer.Migrations
                     b.HasKey("SaleID");
 
                     b.HasIndex("AppUserId");
-
-                    b.HasIndex("ProductID");
 
                     b.ToTable("Satislars");
                 });
@@ -541,15 +541,7 @@ namespace DataAcccessLayer.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("EntityLayer.Concrete.Product", "Product")
-                        .WithMany("Satislars")
-                        .HasForeignKey("ProductID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.Navigation("AppUser");
-
-                    b.Navigation("Product");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>
@@ -611,8 +603,6 @@ namespace DataAcccessLayer.Migrations
             modelBuilder.Entity("EntityLayer.Concrete.Product", b =>
                 {
                     b.Navigation("Comments");
-
-                    b.Navigation("Satislars");
                 });
 #pragma warning restore 612, 618
         }

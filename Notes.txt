@@ -1,6 +1,8 @@
 Testimonial: Referans demek.
 Customer: Müþteri
 NewsLetter: Mail Bülteni alaný
+Highlight : Öne çýkanlar alaný. 
 
+//login þifresini 123456aA? diye girince Sql e kayýt oldu :)
 
 

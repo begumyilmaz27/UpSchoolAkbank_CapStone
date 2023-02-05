@@ -18,7 +18,7 @@ namespace EntityLayer.Concrete
         public bool Status{ get; set; }
         public int Capacity { get; set; }
         public List<Comment> Comments { get; set; } //yorumların listeleneceği kısım olduğu için List yapısını kullandık. Product kısmında yorumlar listelenecek. 
-        
 
+        public List<Satislar> Satislars { get; set; }
     }
 }

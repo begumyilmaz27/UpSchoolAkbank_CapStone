@@ -1,0 +1,27 @@
+﻿@model EntityLayer.Concrete.Satislar
+
+@{
+    ViewData["Title"] = "NewSatis";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+<h1>New Salesment Page</h1>
+<form method="post">
+    <div class="form-group">
+    @Html.Label("Product")
+    @Html.DropDownListFor(x => x.Product, (List<SelectListItem>)ViewBag.v, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.Label("Ürün Sayısı")
+        <input type="text" asp-for="PersonCount" class="form-control" />
+    </div>
+    <div class="form-group">
+        @Html.Label("Tarih")
+        <input type="date" asp-for="SalesDate" class="form-control" />
+    </div>
+    <div class="form-group">
+        @Html.Label("Varsa Eklemek İstedikleriniz")
+        <input type="text" asp-for="SaleDescription" class="form-control" />
+    </div>
+    <button class="btn btn-outline-success">Make a Sales</button>
+</form>
